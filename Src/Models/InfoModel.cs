@@ -9,6 +9,7 @@ namespace Ex3.Models
 {
     public class InfoModel
     {
+        //the getting on private
         private static InfoModel s_instace = null;
 
         public static InfoModel Instance
@@ -27,7 +28,8 @@ namespace Ex3.Models
         private TcpClient tcpClient;
 
         private bool isConnected;
-
+        
+        //the public get set
         public Coordinate Coordinate { get; set; }
 
         public InfoModel()
@@ -52,7 +54,8 @@ namespace Ex3.Models
             isConnected = true;
             
         }
-
+        
+        //introlling the path
         public void Disconnect()
         {
             if (isConnected)
@@ -70,6 +73,7 @@ namespace Ex3.Models
             return double.Parse(s);
         }
 
+        //get on the cooradne
         public Coordinate GetCoordinate()
         {
             if (isConnected)
@@ -100,7 +104,8 @@ namespace Ex3.Models
 
             return this.Coordinate;
         }
-
+        
+        //starving in coordiante
         public Coordinate GetRudderThrottle()
         {
             if (isConnected)
@@ -123,6 +128,7 @@ namespace Ex3.Models
 
                 }
             }
+            //by else opptionty
             else
             {
                 this.Coordinate.Longitude = 0.0;

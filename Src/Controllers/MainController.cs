@@ -15,7 +15,9 @@ namespace Ex3.Controllers
         {
             return View();
         }
-
+        
+        //the htt his ta
+       
         [HttpGet]
         public ActionResult Display(string ip, int port)
         {
@@ -28,6 +30,7 @@ namespace Ex3.Controllers
 
                 return View("LoadTravel");
             }
+            //get it by the else
             else
             {
                 // Display
@@ -41,7 +44,7 @@ namespace Ex3.Controllers
                 return View();
             }
         }
-
+        //open the htt by dim
         [HttpGet]
         public ActionResult DisplayTravel(string ip, int port, int frequency)
         {
@@ -63,7 +66,8 @@ namespace Ex3.Controllers
 
             return View();
         }
-
+        
+        //staring introling
         public const string SCENARIO_FILE = "~/App_Data/{0}.txt";
 
         public string LoadFromFile(string filename, int lineNumber)
@@ -98,6 +102,8 @@ namespace Ex3.Controllers
             textWriter.Close();
         }
 
+
+        //get in spliting gets
         public string GetStringCoordinate(string ip, int port)
         {
             InfoModel infoModel = InfoModel.Instance;
@@ -109,7 +115,8 @@ namespace Ex3.Controllers
 
             return coordinate.Longitude.ToString() + " " + coordinate.Latitude.ToString();
         }
-
+        
+        //instroling dim
         public string GetStringRudderThrottle(string ip, int port)
         {
             InfoModel infoModel = InfoModel.Instance;
